@@ -1,6 +1,6 @@
 name: ML Pipeline CI/CD
 
-on:[push] # Déclenche le workflow à chaque push
+on:[push] # Déclenche le workflow à chaque ppppush
 
 jobs:
   test:
