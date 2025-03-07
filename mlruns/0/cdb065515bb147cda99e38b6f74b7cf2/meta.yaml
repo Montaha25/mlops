@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/cdb065515bb147cda99e38b6f74b7cf2/artifacts
+end_time: 1739534326426
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: cdb065515bb147cda99e38b6f74b7cf2
+run_name: worried-croc-891
+run_uuid: cdb065515bb147cda99e38b6f74b7cf2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739534321659
+status: 3
+tags: []
+user_id: montahar

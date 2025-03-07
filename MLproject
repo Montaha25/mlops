@@ -1,0 +1,16 @@
+name: ml_pipeline_project
+
+conda_env: conda.yaml
+
+entry_points:
+  prepare:
+    command: "python main.py --prepare"
+
+  train:
+    command: "python main.py --train"
+
+  evaluate:
+    command: "python main.py --evaluate"
+
+  test:
+    command: "python test_environement.py"

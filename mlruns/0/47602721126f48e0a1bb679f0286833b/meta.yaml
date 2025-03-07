@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/47602721126f48e0a1bb679f0286833b/artifacts
+end_time: 1741298036755
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 47602721126f48e0a1bb679f0286833b
+run_name: caring-shoat-70
+run_uuid: 47602721126f48e0a1bb679f0286833b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741298031346
+status: 3
+tags: []
+user_id: montahar

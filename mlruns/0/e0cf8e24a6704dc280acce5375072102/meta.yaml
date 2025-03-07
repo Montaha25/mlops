@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/e0cf8e24a6704dc280acce5375072102/artifacts
+end_time: 1740128656872
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e0cf8e24a6704dc280acce5375072102
+run_name: glamorous-crane-982
+run_uuid: e0cf8e24a6704dc280acce5375072102
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1740128649568
+status: 3
+tags: []
+user_id: montahar

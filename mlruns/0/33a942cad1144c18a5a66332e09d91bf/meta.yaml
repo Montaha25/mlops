@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/33a942cad1144c18a5a66332e09d91bf/artifacts
+end_time: 1741298444328
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 33a942cad1144c18a5a66332e09d91bf
+run_name: selective-roo-834
+run_uuid: 33a942cad1144c18a5a66332e09d91bf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741298439328
+status: 3
+tags: []
+user_id: montahar

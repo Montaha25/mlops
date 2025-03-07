@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/34031a8ba0e94afaa43bd290bc642e05/artifacts
+end_time: 1741298062757
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 34031a8ba0e94afaa43bd290bc642e05
+run_name: ambitious-bird-648
+run_uuid: 34031a8ba0e94afaa43bd290bc642e05
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741298058112
+status: 3
+tags: []
+user_id: montahar

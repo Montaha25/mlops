@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/255425667e044aa19182f437ad81ea8a/artifacts
+end_time: 1741296641876
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 255425667e044aa19182f437ad81ea8a
+run_name: gregarious-mink-983
+run_uuid: 255425667e044aa19182f437ad81ea8a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741296637218
+status: 3
+tags: []
+user_id: montahar

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/a0156a8d84714eb2bcf5b4f733d8ae83/artifacts
+end_time: 1741298071493
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a0156a8d84714eb2bcf5b4f733d8ae83
+run_name: unique-fawn-248
+run_uuid: a0156a8d84714eb2bcf5b4f733d8ae83
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741298066645
+status: 3
+tags: []
+user_id: montahar

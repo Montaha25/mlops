@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/02f86e2ecf454a52a189211f7a2cecc7/artifacts
+end_time: 1741297170263
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 02f86e2ecf454a52a189211f7a2cecc7
+run_name: painted-skunk-207
+run_uuid: 02f86e2ecf454a52a189211f7a2cecc7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741297165384
+status: 3
+tags: []
+user_id: montahar

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/0624109ab00541dab5846f918a9432b2/artifacts
+end_time: 1741296715146
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0624109ab00541dab5846f918a9432b2
+run_name: amusing-grouse-948
+run_uuid: 0624109ab00541dab5846f918a9432b2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741296710374
+status: 3
+tags: []
+user_id: montahar

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/5188c60725134556a35fa5095b83417f/artifacts
+end_time: 1739532579976
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5188c60725134556a35fa5095b83417f
+run_name: fearless-bear-123
+run_uuid: 5188c60725134556a35fa5095b83417f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739532574304
+status: 3
+tags: []
+user_id: montahar

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/bbcc4ae3a6b54c4ea2842816b50e82ca/artifacts
+end_time: 1741296623525
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bbcc4ae3a6b54c4ea2842816b50e82ca
+run_name: calm-bug-721
+run_uuid: bbcc4ae3a6b54c4ea2842816b50e82ca
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741296618716
+status: 3
+tags: []
+user_id: montahar

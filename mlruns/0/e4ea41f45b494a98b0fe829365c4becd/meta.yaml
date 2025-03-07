@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/e4ea41f45b494a98b0fe829365c4becd/artifacts
+end_time: 1741296597111
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e4ea41f45b494a98b0fe829365c4becd
+run_name: loud-goose-905
+run_uuid: e4ea41f45b494a98b0fe829365c4becd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741296591743
+status: 3
+tags: []
+user_id: montahar

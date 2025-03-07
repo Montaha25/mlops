@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/d09f7aa6ec7a496f992be508aa9866bb/artifacts
+end_time: 1739534293129
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d09f7aa6ec7a496f992be508aa9866bb
+run_name: delicate-sloth-6
+run_uuid: d09f7aa6ec7a496f992be508aa9866bb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739534288073
+status: 3
+tags: []
+user_id: montahar

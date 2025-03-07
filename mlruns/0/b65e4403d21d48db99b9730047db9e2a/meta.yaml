@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/b65e4403d21d48db99b9730047db9e2a/artifacts
+end_time: 1741298461676
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b65e4403d21d48db99b9730047db9e2a
+run_name: grandiose-vole-257
+run_uuid: b65e4403d21d48db99b9730047db9e2a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741298456928
+status: 3
+tags: []
+user_id: montahar

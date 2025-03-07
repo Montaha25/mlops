@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/899a5ba28a544446a20f86d5d14f1a4f/artifacts
+end_time: 1741296633116
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 899a5ba28a544446a20f86d5d14f1a4f
+run_name: traveling-gull-622
+run_uuid: 899a5ba28a544446a20f86d5d14f1a4f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741296627454
+status: 3
+tags: []
+user_id: montahar

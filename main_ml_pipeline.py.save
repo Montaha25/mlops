@@ -1,0 +1,23 @@
+
+from model_ml_pipeline import preparedata, train_model, evaluate_model, save_model, load_model
+predict:
+      @echo "Prédiction avec le modèle..."
+      @. $(ENV_NAME)/bin/activate && $(PYTHON) main.py
+
+def main():
+
+    X_train_scaled, X_test_scaled, y_train, y_test = preparedata()    
+
+    model = train_model(X_train_scaled, y_train)
+
+    evaluate_model(model, X_test_scaled, y_test)
+
+    save_model(model, 'xgboost_model.pkl')
+
+    loaded_model = load_model('xgboost_model.pkl')
+
+    evaluate_model(loaded_model, X_test_scaled, y_test)
+
+
+
+main()

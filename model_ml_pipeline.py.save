@@ -1,0 +1,35 @@
+import pandas as pd 
+import numpy as np 
+from sklearn.model_selection import train_test_split 
+from sklearn.ensemble import RandomForestClassifier 
+from sklearn.metrics import accuracy_score 
+from sklearn.preprocessing import StandardScaler, LabelEncoder 
+import joblib
+
+def prepare_data(data_path='Churn_Modelling.csv'): 
+# Importation d'un encodeur pour transformer les données catégoriques en numériques 
+encoder = LabelEncoder()
+ # Chargement des données depuis le fichier CSV 
+    data = pd.read_csv(data_path) 
+    # Suppression des colonnes inutiles pour la prédiction (le nom et le pays) 
+    data = data.drop(['Surname', 'Geography'], axis=1) 
+    # Encodage de la colonne "Gender" (par exemple, "Male" -> 1 et "Female" -> 0) 
+    data['Gender'] = encoder.fit_transform(data['Gender']) 
+    # Suppression des lignes avec des données manquantes 
+    data = data.dropna() 
+    # Séparation des données en caractéristiques (X) et cible (y) 
+    # Suppression des colonnes inutiles pour X, en gardant les colonnes utiles 
+    X = data.drop(['Exited', 'RowNumber', 'CustomerId'], axis=1)  # X : Caractéristiques 
+    y = data['Exited']  # y : Cible (le label à prédire) 
+    # Division des données en jeu d'entraînement (80 %) et jeu de test (20 %) 
+    x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1) 
+    # Normalisation des données pour mettre les valeurs sur une même échelle 
+    scaler = StandardScaler() 
+     # Ajustement et transformation des données d'entraînement 
+    x_train_scaled = scaler.fit_transform(x_train) 
+    # Transformation des données de test en utilisant le même scaler 
+    x_test_scaled = scaler.transform(x_test) 
+    # Sauvegarde du scaler pour une utilisation ultérieure 
+    joblib.dump(scaler, 'scaler.joblib') 
+    # Retourne les données préparées pour le modèle 
+    return x_train_scaled, x_test_scaled, y_train, y_test
