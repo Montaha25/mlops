@@ -3,32 +3,32 @@ name: ML Pipeline CI/CD
 on:
   push:
     branches:
-      - main  # Déclenche le workflow seulement sur les pushs vers main
+      - main  # Déclenche le workflow sur chaque push vers la branche main
   pull_request:
     branches:
       - main  # Déclenche aussi le workflow sur les pull requests vers main
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # Exécute sur une machine Ubuntu
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2  # Télécharge le code
+        uses: actions/checkout@v2
 
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.8'  # Version de Python
+          python-version: '3.8'
 
       - name: Install dependencies
-        run: pip install -r requirements.txt  # Installe les dépendances
+        run: pip install -r requirements.txt
 
       - name: Run unit tests
-        run: pytest tests/  # Exécute les tests unitaires
+        run: pytest tests/
 
   prepare-data:
     runs-on: ubuntu-latest
-    needs: test  # Attend que les tests soient terminés
+    needs: test
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -42,11 +42,11 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Prepare data
-        run: python scripts/data_preparation.py  # Exécute le script de préparation des données
+        run: python scripts/data_preparation.py
 
   train-model:
     runs-on: ubuntu-latest
-    needs: prepare-data  # Attend que la préparation des données soit terminée
+    needs: prepare-data
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -60,15 +60,15 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Train model
-        run: python main.py  # Exécute l'entraînement du modèle
+        run: python main.py
 
   notify:
     runs-on: ubuntu-latest
-    needs: train-model  # Attend que l'entraînement soit terminé
+    needs: train-model
     steps:
       - name: Send Slack notification
         uses: rtCamp/action-slack-notify@v2
         env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}  # Configure ton webhook Slack
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_MESSAGE: "ML Pipeline terminé avec succès !"
 
