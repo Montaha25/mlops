@@ -1,55 +1,70 @@
 name: ML Pipeline CI/CD
-on: [push]
+
+on:
+  push:
+    branches:
+      - main  # Déclenche le workflow sur chaque push vers la branche main
+  pull_request:
+    branches:
+      - main  # Déclenche le workflow sur chaque pull request vers main
 
 jobs:
-  prepare-data:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.8'
+
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Run unit tests
+        run: pytest tests/
+
+  prepare-data:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
       - name: Prepare data
-        run: python scripts/prepare_data.py
+        run: python scripts/data_preparation.py
 
   train-model:
     runs-on: ubuntu-latest
-    needs: prepare-data  # Attend que la préparation des données soit terminée
+    needs: prepare-data
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.8'
+
       - name: Install dependencies
         run: pip install -r requirements.txt
+
       - name: Train model
-        run: python model_pipeline.py
-
-  test:
-    runs-on: ubuntu-latest
-    needs: train-model  # Attend que l'entraînement soit terminé
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.8'
-      - name: Install dependencies
-        run: pip install -r requirements.txt && pip install pytest
-
-      - name: Run unit tests
-        run: pytest tests/test_model_pipeline.py
+        run: python main.py
 
   notify:
     runs-on: ubuntu-latest
-    needs: test  # Attend que les tests soient terminés
+    needs: train-model
     steps:
       - name: Send Slack notification
         uses: rtCamp/action-slack-notify@v2
