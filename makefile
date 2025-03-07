@@ -63,14 +63,6 @@ all: setup data train evaluate save load test notebook
 clean:
 	@echo "🔹 Cleaning up temporary files..."
 	@rm -rf $(ENV_NAME) __pycache__ *.log $(MODEL_FILE)
-
-#10 notebook 
-notebook:
-	@echo "🔹 Démarrage de Jupyter Notebook..."
-	@bash -c "source $(ENV_NAME)/bin/activate && nohup $(ENV_NAME)/bin/jupyter notebook --no-browser > jupyter.log 2>&1 &"
-	@sleep 3
-	@$(PYTHON) -c "import webbrowser; webbrowser.open('http://localhost:8888/tree')"
-
 #11 
 run-api:
 	uvicorn app:app --reload
@@ -107,6 +99,13 @@ start-mlflow:
 	--default-artifact-root ./mlruns \
 	--host 0.0.0.0 --port 5000 &
 	@echo "✅ MLflow est démarré sur http://localhost:5000"
+
+#10 notebook
+notebook:
+	@echo "🔹 Démarrage de Jupyter Notebook..."
+	@bash -c "source $(ENV_NAME)/bin/activate && nohup $(ENV_NAME)/bin/jupyter notebook --no-browser > jupyter.log 2>&1 &"
+	@sleep 3
+	@$(PYTHON) -c "import webbrowser; webbrowser.open('http://localhost:8888/tree')"
 #docker
 # Construire l’image Docker
 build-docker:
