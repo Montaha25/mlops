@@ -107,3 +107,18 @@ start-mlflow:
 	--default-artifact-root ./mlruns \
 	--host 0.0.0.0 --port 5000 &
 	@echo "✅ MLflow est démarré sur http://localhost:5000"
+#docker
+# Construire l’image Docker
+build-docker:
+	@echo "Construction de l’image Docker..."
+	@docker build -t montaha_rebhi_4ds6_mlops .
+
+# Exécuter le conteneur Docker
+run-docker:
+	@echo "Lancement du conteneur Docker..."
+	@docker run -p 8000:8000 montaha_rebhi_4ds6_mlops
+# Pousser l’image sur Docker Hub
+push-docker:
+	@echo "Poussée de l’image sur Docker Hub..."
+	@docker tag montaha_rebhi_4ds6_mlops montaha25/montaha_rebhi_4ds6_mlops:v1
+	@docker push montaha25/montaha_rebhi_4ds6_mlops:v1
